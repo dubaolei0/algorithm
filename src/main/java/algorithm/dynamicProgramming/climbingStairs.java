@@ -6,7 +6,7 @@ package algorithm.dynamicProgramming;
  * @ClassName climbingStairs.java
  * @Description 爬楼梯[动态规划]   https://leetcode.cn/problems/climbing-stairs/
  * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
- * <p>
+ *
  * 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
  * 示例1：
  * 输入：n = 2
@@ -33,7 +33,7 @@ public class climbingStairs {
      * case 8: result = 34; break;
      * case 9: result = 55; break;
      * case 10: result = 89; break;
-     *
+     * 相当于后两个数之和   斐波那契数列问题
      * @param num
      * @return
      */
@@ -45,8 +45,8 @@ public class climbingStairs {
         int i2 = 2;
         for (int i = 3; i <= num; i++) {
             int temp = i1+i2;
-            i1 = i2;
-            i2 = temp;
+            i1 = i2;    // 相当于下一轮的第一个数
+            i2 = temp;  // 相当于下一轮的第二个数
         }
 
         return i2;
