@@ -1,5 +1,7 @@
 package algorithm.array;
 
+import java.util.Arrays;
+
 /**
  * @author dubaolei
  * @version 1.0.0
@@ -21,7 +23,11 @@ package algorithm.array;
 public class removeDuplicatesFromSortedArray {
     public static void main(String[] args) {
         int[] ints = new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        System.out.println(removeDuplicatesFromSortedArray(ints));
+        int i1 = removeDuplicatesFromSortedArray(ints);
+        int[] ints1 = Arrays.copyOfRange(ints, 0, i1);
+        for (int i = 0; i < ints1.length; i++) {
+            System.out.println(ints1[i]);
+        }
     }
 
     /**
